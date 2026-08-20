@@ -1,0 +1,26 @@
+Write a C program that reads 3 numbers and displays the largest one.
+
+#include <stdio.h>
+
+int main()
+{
+    float vm1, vm2, vm3;
+    
+    printf("Digite seu número: ");
+    scanf("%f", &vm1);
+    
+    printf("Digite seu número: ");
+    scanf("%f", &vm2);
+    
+    printf("Digite seu número: ");
+    scanf("%f", &vm3);
+    
+    if (vm1 > vm2 && vm1 > vm3)
+        printf("Maior número: %.2f", vm1);
+        
+    else if (vm2 > vm1 && vm2 > vm3)
+        printf("Maior número: %.2f", vm2);
+        
+    else
+        printf("Maior número: %.2f", vm3);
+}
