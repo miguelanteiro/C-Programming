@@ -1,0 +1,21 @@
+Write a C program that reads a worker's salary and the monthly payment of a loan.
+If the payment is greater than 20% of the salary, print: "Loan not granted", otherwise print: "Loan granted."
+
+#include <stdio.h>
+
+int main()
+{
+    float vm1, vm2;
+    
+    printf("Digite o salário: ");
+    scanf("%f", &vm1);
+    
+    printf("Digite o valor da prestação: ");
+    scanf("%f", &vm2);
+    
+    if (vm2 < vm1 * 0.2)
+        printf("Empréstimo concedido");
+        
+    else
+        printf("Empréstimo não concedido");
+}
