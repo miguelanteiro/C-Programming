@@ -1,0 +1,29 @@
+Write a program that receives a person's height and biological sex, then calculates and displays their ideal weight using the following formulas (where h corresponds to height):
+• Men: (72.7 * h) – 58
+• Women: (62.1 * h) – 44.7
+
+#include <stdio.h>
+
+int main()
+{
+    float vm1, vm2, vm3;
+    
+    printf("Digite seu sexo: \n1-Masculino \n2-Feminino\n");
+    scanf("%f", &vm1);
+    
+    printf("Digite sua altura (utilize ponto): ");
+    scanf("%f", &vm2);
+    
+    if (vm1 == 1) {
+    vm3 = (vm2 * 72.7) - 58;
+        printf("Seu peso ideal é de: %.2fkg", vm3);
+    }
+    else if (vm1 == 2) {
+    vm3 = (vm2 * 62.1) - 44.7;
+         printf("Seu peso ideal é de: %.2fkg", vm3);
+    }
+    else { 
+        printf("Digite uma opção válida!");
+    }    
+    return 0;
+}
