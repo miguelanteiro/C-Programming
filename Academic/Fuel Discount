@@ -1,0 +1,45 @@
+A gas station is selling fuel with the following discount table:
+
+Ethanol:
+up to 20 liters, 3% discount per liter;
+above 20 liters, 5% discount per liter.
+
+Gasoline:
+up to 20 liters, 4% discount per liter;
+above 20 liters, 6% discount per liter.
+
+Write a C program that reads the number of liters sold, the type of fuel (coded as follows: A-ethanol, G-gasoline)
+calculates and prints the amount to be paid by the customer
+knowing that the price of a liter of gasoline is $2.50 and the price of a liter of ethanol is $1.90.
+
+#include <stdio.h>
+
+int main() {
+  float litros, preco;
+  char combustivel;
+  printf("Fuel type (A-Ethanol / G-Gasoline): ");
+  scanf(" %c", &combustivel);
+  printf("Amount in liters: ");
+  scanf("%f", &litros);
+  if (combustivel == 'A' || combustivel == 'a'){
+    if (litros <= 20) {
+      preco = litros * 1.90 * 0.97;
+    } else {
+      preco = litros * 1.90 * 0.95;
+    }
+  }
+  else if (combustivel == 'G' || combustivel == 'g'){
+    if (litros <= 20) {
+      preco = 2.50 * litros * 0.96;
+    } else { 
+      preco = 2.50 * litros * 0.94;
+    }
+  }
+  else {
+    printf("Invalid fuel type!");
+    return 1;
+  }  
+   
+  printf("The total amount to be paid is $ %.2f", preco);
+  return 0;
+}
