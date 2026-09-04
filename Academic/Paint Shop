@@ -1,0 +1,25 @@
+Write a C program for a paint shop. The program should ask for the size of the area to be painted in square meters.
+Consider that paint coverage is 1 liter for every 3 square meters and that paint is sold in 18-liter cans, which cost $80.00.
+Inform the user of the quantity of paint cans to be purchased and the total price.
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float area;
+    float litros;
+    int latas;
+    float preco_total;
+    
+    printf("Enter the size of the area to be painted (in m2): ");
+    scanf("%f", &area);
+    
+    litros = area / 3.0;
+    latas = (int)ceil(litros / 18.0);
+    preco_total = latas * 80.0;
+    
+    printf("Quantity of paint cans to buy: %d can(s)", latas);
+    printf("\nTotal price: $ %.2f", preco_total);
+    
+    return 0;
+}
