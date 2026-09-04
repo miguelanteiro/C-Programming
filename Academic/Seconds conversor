@@ -1,0 +1,26 @@
+Write a program that reads a quantity of seconds and converts this value into:
+
+hours;
+minutes;
+seconds.
+
+
+#include <stdio.h>
+
+int main() {
+    int min, hor, seg, seg_total;
+    
+    printf("Enter the amount of seconds: ");
+    scanf("%d", &seg_total);
+    
+    
+    hor = seg_total / 3600;
+    min = (seg_total % 3600) / 60;
+    seg = seg_total % 60;
+
+    printf("Hours: %d", hor);
+    printf("\nMinutes: %d", min);
+    printf("\nSeconds: %d", seg);
+
+    return 0;
+}
